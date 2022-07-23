@@ -9,9 +9,11 @@
 }
 
 nav{
-    background: black;
-    height: 220px;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 
 img{
@@ -34,9 +36,12 @@ nav ul li{
     margin:0px 15px;
 }
 
+nav ul li a{
+    color: white;
+}
+
 footer nav{
     margin-top: 100px;
-    height: 100px;
 }
 
 footer nav ul{
@@ -46,27 +51,12 @@ footer nav ul{
 footer nav ul li{
     font-size: 15px;
     margin: auto;
-}
-
-nav ul li a{
-    color: white;
+    padding: 0px 110px;
 }
 
 a:hover{
     background-color: lightslategray;
 
-}
-
-.checkbutton{
-    font-size: 35px;
-    color: white;
-    float: right;
-    line-height: 100px;
-    display: none;
-}
-
-#checkbox{
-    display: none;
 }
 
 #category_1{
@@ -125,12 +115,12 @@ main img{
     text-decoration: underline;
 }
 
-#book_page_body{
+.book_page_body{
     display: flex;
     margin: 0;
 }
 
-#book_page_body img{
+#big_image{
     width: 400px;
     height: 600px;
 }
@@ -172,10 +162,6 @@ main img{
 }
 
 @media screen and (max-width:960px) {
-    header nav{
-        height: 120px;
-    }
-
     img{
         width: 100px;
         height: 100px;
@@ -183,32 +169,67 @@ main img{
         margin: 10px;
     }
 
-    .checkbutton{
+    nav ul li{
         display: block;
     }
 
-    header nav ul{
+    footer nav ul li{
+        line-height: 30px;
         width: 100%;
-        height: 40vh;
-        margin: 115px 0;
-        background-color: gray;
-        text-align: center;
-        position: absolute;
-        top: 0px;
     }
 
-    header nav ul li{
+    footer nav ul{
+        display: block;      
+    }
+    
+    main img{
+        width: 120px;
+        height: 170px;
+    }
+
+    .bookscategory{
         display: block;
-        margin: 50px 0px;
-        line-height: 20px;
+        margin: auto;
     }
 
-    header nav ul li a{
-        color: white;
-        font-size: 20px;
+    .bookstitle{
+        display: block;
+        margin: auto;
     }
 
-    #checkbox:checked ~ ul{
-        left: 0;
+    .form_label, .form_field{
+        display: block;
+        margin: auto;
+    }
+    
+    .book_page_body{
+        display: block;
+        margin: auto;
+    }
+
+    #big_image{
+        width: 120px;
+        height: 170px;
+    }
+
+    #small_images{
+        display: flex;
+    }
+
+    #small1, #small2, #small3{
+        width: 33%;
+        margin: 40px;
+    }
+
+    #price_n_buy h3{
+        display: block;
+        font-size: 30px;
+        padding: auto;
+        margin: auto;
+    }
+    
+    #price_n_buy button{
+        display: block;
+        font-size: 30px;
     }
 }
