@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbutton">
+                <i class="fas fa-bars"></i>
+            </label>
+            <img src="img/logo.png" alt="logo">
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="category_page.html">Category 1</a></li>
+                <li><a href="category_page.html">Category 2</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <form onsubmit="return false;" method="post">
+            <div class="form_row">
+                <div class="form_label">
+                    <label for="contact_purpose">Contact Purpose</label>
+                </div>
+                <div class="form_field">
+                    <select name="contact_purpose" id="contact_purpose">
+                        <option value="sell">I want to sell books</option>
+                        <option value="buy">I want to buy books</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form_row">
+                <div class="form_label">
+                    <label for="name">Your name</label>
+                </div>
+                <div class="form_field">
+                    <input type="text" required id="name" name="name" maxlength="100"> 
+                </div>
+            </div>
+
+            
+            <div class="form_row">
+                <div class="form_label">
+                    <label for="email">Your email</label>
+                </div>
+                <div class="form_field">
+                    <input type="email" required id="email" name="email"> 
+                </div>
+            </div>
+
+            
+            <div class="form_row">
+                <div class="form_label">
+                    <label for="tel">Your phone</label>
+                </div>
+                <div class="form_field">
+                    <input type="tel" required id="tel" name="phone" pattern="[0-9]{9,13}" title="Your phone num must be 9 to 13 digits"> 
+                </div>
+            </div>
+
+            <div class="form_row">
+                <div>
+                    <label>How can we contact you:</label>
+                </div>
+                <div>
+                    <ol>
+                        <li>
+                            <input type="checkbox" name="contact_method(s)[]" value="email" id="by_email">
+                            <label for="by_email">By email</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="contact_method(s)[]" value="phone" id="by_phone">
+                            <label for="by_phone">By phone</label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="form_row">
+                <div>
+                    <label>Do you want to receive our weekly newsletter:</label>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <input checked type="radio" name="weekly_newsletter" value="yes" id="yes">
+                            <label for="yes">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="weekly_newsletter" value="no" id="no">
+                            <label for="no">No</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form_row">
+                <div>
+                  <label for="note">Note</label>
+                </div>
+                <div>
+                  <textarea cols="40" rows="10" required id="note" name="note"></textarea>
+                </div>
+              </div>
+
+            <div class="form_row">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Copyright</a></li>
+                <li><a href="contact_page.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
